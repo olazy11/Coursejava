@@ -1,0 +1,47 @@
+if else if - если одна переменная для нескольких значений
+
+int day=1;
+        if (day ==1) {//compare two values
+            System.out.println("Monday");
+
+        }else if (day ==2){
+            System.out.println("Tuesday");
+        }else if (day ==3) {
+            System.out.println("Wednesday");
+
+        }else if (day ==4) {
+            System.out.println("Thursday");
+
+        }else if (day ==5) {
+            System.out.println("Friday");
+
+        }else if (day ==6) {
+            System.out.println("Saturday");
+
+        }else if (day ==7) {
+            System.out.println("Sunday");
+        }else {
+            System.out.println("Please enter a day between 1 and 7");
+
+
+nested if - если несколько переменных, несколько условий и эти условия зависят друг от друга
+
+        int money = 1000;
+        String day = "Sunday";
+        boolean mood = false;
+
+        if (money > 700) {
+
+            if (mood) {
+                System.out.println("Lets go shopping");
+
+            } else {
+                System.out.println("Lets first save money");
+
+Scanner -ввод данных с клавиатуры,
+        импортируем класс Scanner - inport java.util.Scanner;
+
+        Scanner input = new Scanner (System.in);
+        System.out.println("что нужно ввести-напр.имя");
+        String name = input.nextLine(); (ввод)
+        System.out.println(name); (печать)

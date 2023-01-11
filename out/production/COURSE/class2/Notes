@@ -1,0 +1,18 @@
+ int box1=10;
+        System.out.println(box1); output - 10
+   int box1=10;
+          System.out.println("box1");  output - box1
+ /* multiline comment
+ //one line  comment
+
+ types of numbers:
+ whole = byte, short, int, long
+ and decimal (10.125) = float and double
+
+ char - letters/symbols max 1 letter ' '
+ char letter = 's'; одинарные кавычки
+
+ String name ="Sam"; двойные кавычки String с большой буквы, так как относится к непримитивному типу данных
+
+CTRL D -скопировать строку
+int myBox =128; =первая буква строчная,вторая прописная
