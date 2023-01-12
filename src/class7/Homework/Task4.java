@@ -1,5 +1,15 @@
 package class7.Homework;
-/*
-* Print even numbers from 20 to 1 (2 ways)*/
+
 public class Task4 {
-}
+    public static void main(String[] args) {
+        int num =20;
+
+        while (num >= 2) {
+            System.out.println(num);
+
+        num=num-2;}
+
+        }
+
+    }
+
