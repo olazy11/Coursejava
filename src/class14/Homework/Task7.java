@@ -13,7 +13,7 @@ String str2 ="Kuzya";
         System.out.println("After swapping 1 to str2 : " + str1 +" " +str2);
 
 
-        
+
     }
 }
 
