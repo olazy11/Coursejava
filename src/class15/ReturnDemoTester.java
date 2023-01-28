@@ -9,7 +9,6 @@ public class ReturnDemoTester {
             int result=rd.method2();
             System.out.println(result);*/
         }
-}
 
 
 
