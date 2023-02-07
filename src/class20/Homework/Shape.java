@@ -9,16 +9,14 @@ public class Shape {
         this.radius=radius;    }   }
 
 class Circle extends Shape {
-    double area;
+
     double pi;
     Circle(double radius,double pi){
         super(radius);
     this.pi=pi;}
 
     double CalculateArea (){
-        area =(super.radius*super.radius)*pi;
-        return area;
-
+        return (super.radius*super.radius)*pi;
 
         }
 

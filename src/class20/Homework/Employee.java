@@ -5,37 +5,36 @@ Create a Tester Subclass from FullTime Employee and add some features and method
 Test your code!
 * */
 public class Employee {
-
+    static int classCounter;
     String firstname;
     String surname;
     int age;
     String position;
 
-    Employee (String firstname, String surname, int age, String position) {
-        this.firstname=firstname;
+    Employee(String firstname, String surname, int age, String position) {
+        this.firstname = firstname;
         this.surname = surname;
-        this.age=age;
-        this.position = position; }
-    void showinfo () {
-        System.out.println("Employee's datails: "+ firstname+" "+ surname + " "+age+ " "+position);
+        this.age = age;
+        this.position = position;
     }
+    void showinfo() {
+        System.out.println("Employee's datails: " + firstname + " " + surname + " " + age + " " + position);
     }
-
-
+         }
  class FulltimeEmployee extends Employee {
      String gender;
      FulltimeEmployee(String firstname, String surname, int age, String position, String gender) {
          super(firstname, surname, age, position);
-         this.gender = gender;
-     }
+         this.gender = gender;     }
 
      void ifOld() {
          if (age > 50) {
              System.out.println("Full-time employee is to old to spend all days in the office");
          } else {
-             System.out.println("Work,work,work! while you are young");         }
+             System.out.println("Work,work,work! while you are young");
+         }
+         }
      }
- }
  class Tester extends FulltimeEmployee {
      boolean ifgood;
      Tester(String firstname, String surname, int age, String position, String gender, boolean ifgood) {
@@ -45,21 +44,24 @@ public class Employee {
      void goodOrBad () {
          System.out.println("Employee tester is good to people "+ ifgood);
      }
+
  }
-
-         class ParttimeEmployee extends Employee {
-             int EmpCount =0;
+ class ParttimeEmployee extends Employee { //видит только свой immdetiate super
              double salary;
-
              ParttimeEmployee(String firstname, String surname, int age, String position, double salary) {
                  super(firstname, surname, age, position);
                  this.salary = salary;
              }
-             int getEmpCount() {
-                 EmpCount++;
-                 return EmpCount;
-             }
-         }
+     public static int getNo (){
+         classCounter++;
+         return classCounter;
+     }
+     public void showNo () {
+         System.out.println(getNo());
+     }
+            }
+
+
 
 
 
