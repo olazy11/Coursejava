@@ -1,21 +1,23 @@
 package class20.Homework;
 
 public class EmployeeTest {
+
     public static void main(String[] args) {
+
         Employee emp = new Employee("Olya","Shibaeva",47, "translator");
-        emp.showinfo();
+        emp.showInfo();
+        emp.getNo();
 
         FulltimeEmployee ft = new FulltimeEmployee("Irina","Semenova", 40,"realtor","female");
+        ft.showInfo();
         ft.ifOld();
-        ft.showinfo();
 
         ParttimeEmployee pt = new ParttimeEmployee("Milan", "Gnatuyk",15,"pupil", 5000);
-        pt.getNo();
-        pt.showNo();
+        pt.showInfo();
+        pt.showNo ();
 
-        pt.showinfo();
         Tester ts = new Tester("Ivan", "Ivanov",50,"manager", "male", false);
-        ts.showinfo();
+        ts.showInfo();
         ts.goodOrBad();
 
 
