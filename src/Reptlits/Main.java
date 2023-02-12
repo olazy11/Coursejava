@@ -1,34 +1,21 @@
 package Reptlits;
 
 public class Main {
-
-    static void mystery(int[] a) {
-
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] % 2 == 0) {
-                a[i] = a[i] / 2;
-            } else if ( a[i] % 2 != 0)  {
-                a[i] = a[i] * 10;
-            }
-
-            System.out.println(a[i]);
-        }
+    //test case below (dont change):
+    public static void main(String[] args) {
+        System.out.println(surround("abcabcabc", "c")); //"ab(c)ab(c)ab(c)"
+        System.out.println(surround("technology", "o")); //"techn(o)l(o)gy"
     }
 
+    static String surround(String s, String c) {
+        String search_term = new String();
+        for (int i = 0; i < s.length(); i++) {
 
-        public static void main (String[]args){
-            int[] a = {1, 2, 3, 4, 5};
-            mystery(a);
-            // should print out 10 1 30 2 50
         }
-    }
+
+    return s.replaceAll(c, "(" + c + ")");
+}
+}
 
 
-
-
-
-
-
-
-    
 
