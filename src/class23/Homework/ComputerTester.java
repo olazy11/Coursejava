@@ -10,6 +10,15 @@ public class ComputerTester {
             x.robust();
 
 
+if (x instanceof Apple ){
+    Apple apple =(Apple)x;
+    apple.playVideo();
+   /* apple.OS;???*/
+
+
+
+}
+
 
         }
     }

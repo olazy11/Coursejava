@@ -4,6 +4,10 @@ Define common behavior within and some fields in parent class and override some 
 Define some methods specific to child classes
 Create objects of child classes and store them into array. Loop through each object and execute available methods.*/
 public class Computer {
+    int storage;
+    int RAM;
+    String OS;
+
     public void process () {
         System.out.println("Processing    ");
     }
@@ -21,6 +25,9 @@ class Apple extends Computer {
     @Override
     public void robust() {
         super.robust();
+    }
+    void playVideo () {
+        System.out.println("good");
     }
 }
 

@@ -1,21 +1,43 @@
 package Reptlits;
+/*1. Create four classes (Person, Employee, Student, Retiree)
 
-public class Main {
-    //test case below (dont change):
-    public static void main(String[] args) {
-        System.out.println(surround("abcabcabc", "c")); //"ab(c)ab(c)ab(c)"
-        System.out.println(surround("technology", "o")); //"techn(o)l(o)gy"
-    }
+* Have properties
 
-    static String surround(String s, String c) {
-        String search_term = new String();
-        for (int i = 0; i < s.length(); i++) {
+For Person: name(String)
 
-        }
+For Person: lastName(String)
 
-    return s.replaceAll(c, "(" + c + ")");
+For Person: age(int)
+
+For Employee: salary(int)
+
+For Student: grade(int)
+
+For Retiree: seniorActivity(String)
+
+At Employee, Student, Retiree Class have a print method in each that prints the properties in line as shown in the output
+
+Create multilevel inheritance: Person --> Employee --> Student --> Retiree
+
+From your Main class create objects of the Employee, Student and Retiree classes and call the print method.
+
+**Expected Output:**
+
+```
+Joe Smith 35 35000
+Adam Smith 15 10
+Frank Smith 15 tour
+```
+*
+*
+* */
+class Main {
+    
+
 }
-}
+
+
+
 
 
 
