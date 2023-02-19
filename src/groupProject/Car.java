@@ -1,12 +1,5 @@
 package groupProject;
-/*
 
-The Sedan class has field as length and also
-does it is own implementation of
-calculateSalePrice(): if length of sedan is >20
-feet then returned car price should include 5%
-discount, otherwise 10% discount
-* */
 public class Car {
    double carPrice;
    String color;
@@ -28,10 +21,10 @@ class Sedan extends Car {
     @Override
     double calculateSalePrice() {
         if (length >20){
-            carPrice = carPrice - (carPrice * (carPrice *5 / 100)) / 100;
+            carPrice = carPrice - carPrice *5 / 100;
             return carPrice;
         } else {
-            carPrice = carPrice - (carPrice * (carPrice *10 / 100)) / 100;
+            carPrice = carPrice - carPrice *10 / 100;
             return carPrice;
         }
         }
@@ -47,10 +40,10 @@ class Truck extends Car {
     @Override
     double calculateSalePrice() {
         if (weight > 2000) {
-            carPrice = carPrice - (carPrice * (carPrice * 10 / 100)) / 100;
+            carPrice = carPrice - (carPrice * 10 / 100) ;
             return carPrice;
         } else {
-            carPrice = carPrice - (carPrice * (carPrice * 20 / 100)) / 100;
+            carPrice = carPrice - (carPrice * 20 / 100);
             return carPrice;
 
         }
