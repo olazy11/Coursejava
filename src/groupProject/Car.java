@@ -20,7 +20,7 @@ class Sedan extends Car {
     }
     @Override
     double calculateSalePrice() {
-        if (length >20){
+        if (length >2000){
             carPrice = carPrice - carPrice *5 / 100;
             return carPrice;
         } else {
