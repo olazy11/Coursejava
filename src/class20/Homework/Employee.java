@@ -16,17 +16,16 @@ public class Employee {
         this.surname = surname;
         this.age = age;
         this.position = position;
+        classCounter++;
     }
 
     void showInfo() {
         System.out.println("Employee's details: " + firstname + " " + surname + " " + age + " " + position);
     }
 
-    static int getNo() {
-        classCounter++;
-        return classCounter;
+
     }
-}
+
 
     class FulltimeEmployee extends Employee {
         String gender;
@@ -34,6 +33,7 @@ public class Employee {
         FulltimeEmployee(String firstname, String surname, int age, String position, String gender) {
             super(firstname, surname, age, position);
             this.gender = gender;
+            classCounter++;
         }
 
         void ifOld() {
@@ -52,6 +52,7 @@ public class Employee {
         Tester(String firstname, String surname, int age, String position, String gender, boolean ifgood) {
             super(firstname, surname, age, position, gender);
             this.ifgood = ifgood;
+            classCounter++;
         }
 
         void goodOrBad() {
@@ -66,10 +67,11 @@ public class Employee {
         ParttimeEmployee(String firstname, String surname, int age, String position, double salary) {
             super(firstname, surname, age, position);
             this.salary = salary;
+            classCounter++;
         }
 
         void showNo() {
-            System.out.println(super.getNo());
+            System.out.println ("Number of employees is  "+ classCounter);
         }
 
     }

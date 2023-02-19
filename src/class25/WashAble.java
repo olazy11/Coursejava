@@ -25,6 +25,6 @@ public interface WashAble {
             System.out.println("I am IP65 Rated you can wash me");
         }
     }
-}
+
 
 

@@ -6,7 +6,7 @@ public class EmployeeTest {
 
         Employee emp = new Employee("Olya","Shibaeva",47, "translator");
         emp.showInfo();
-        emp.getNo();
+
 
         FulltimeEmployee ft = new FulltimeEmployee("Irina","Semenova", 40,"realtor","female");
         ft.showInfo();
