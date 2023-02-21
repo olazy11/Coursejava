@@ -5,101 +5,105 @@ public interface WebDriver {
     void close();
     String getTitle ();}
 
-interface RemoteDriver extends WebDriver {
+interface RemoteDriver extends WebDriver, TakesScreenShots {
 
 void navigate();
-    @Override
-    default void open() {
-        System.out.println("RemoteDriver opens");
-    }
-    @Override
-    default void close() {
-        System.out.println("RemoteDriver closes");    }
 
-    @Override
-    default String getTitle() {
-        return null;    }
 }
+interface TakesScreenShots  {
 
-interface TakesScreenShots extends RemoteDriver {
+    void getScreenShot();
 
-    void getScreenShot ();}
+    }
 
 class ChromeDriver implements RemoteDriver {
-static String webPage = "https://www.google.com/intl/ru_ru/chrome/";
-static String title = "Chrome";
+ String webPage = "https://www.google.com/intl/ru_ru/chrome/";
+ String title = "Chrome";
 
     @Override
     public void open() {
-        System.out.println("ChromeDriver opens");    }
+        System.out.println("ChromeDriver opens");
+    }
+
     @Override
     public void close() {
         System.out.println("ChromeDriver closes");
     }
+
     @Override
     public String getTitle() {
         if (webPage.contains("chrome")) {
-            return title;
-        }
-        return null;
-    }
-
-
-    public ChromeDriver() {
-    }
+            return title;    }
+        return null;}
 
     @Override
     public void navigate() {
         System.out.println("ChromeDriver navigates");
     }
+    public void getScreenShot() {
+        System.out.println("ChromeDriver takes screens");
+    }
+
 }
-class FirefoxDriver implements RemoteDriver{
-static String webPage = "https://www.mozilla.org/ru/firefox/new/";
-static String title = "Firefox";
+class FirefoxDriver implements RemoteDriver {
+    String webPage = "https://www.mozilla.org/ru/firefox/new/";
+    String title = "Firefox";
+
+    @Override
+    public void navigate() {
+        System.out.println("Firefox navigates");
+    }
+
     @Override
     public void open() {
-        System.out.println("Firefox opens");    }
+        System.out.println("Firefox opens");
+    }
 
     @Override
     public void close() {
-        System.out.println("Firefox closes");    }
+        System.out.println("Firefox closes");
 
-    @Override
-    public String getTitle() {
-        if (webPage.contains("firefox")) {
-            return title;
-
-        }
-        return null;
     }
     @Override
-    public void navigate() {
-        System.out.println("Firefox navigates");    }
+    public String getTitle() {
+        if (webPage.contains("firefox")) {        return title;    }    return null;
+    }
+
+    public void getScreenShot() {
+        System.out.println("Firefox takes screens");
+    }
 }
+
 class SafariDriver implements RemoteDriver {
-    static String webPage = "https://www.apple.com/ru/safari/";
-    static String title = "Safari";
+
+    String webPage = "https://www.apple.com/ru/safari/";
+    String title = "Safari";
 
     @Override
     public void open() {
-        System.out.println("SafariDriver opens");
+        System.out.println("Safari opens");
     }
 
     @Override
     public void close() {
-        System.out.println("SafariDriver closes");
+        System.out.println("Safari closes");
+
     }
 
     @Override
     public String getTitle() {
-        if (webPage.contains("safari")) {
-            return title;
-        }
-        return null;
+        if (webPage.contains("safari")) {        return title;    }    return null;
     }
 
+public void getScreenShot() {
+    System.out.println("Safari takes screens");
+}
     @Override
     public void navigate() {
-        System.out.println("SafariDriver navigates");
+        System.out.println("Safari navigates");
+
     }
+
+
 }
+
