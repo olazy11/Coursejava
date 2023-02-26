@@ -13,10 +13,11 @@ public class Task4 {
         drinks.add("Beer");
         drinks.add("Milk");
         for (int i = 0; i < drinks.size(); i++) {
-            if(drinks.get(i).contains("a") ||drinks.get(i).contains("e")  ){
+            if(drinks.contains("a") ||drinks.contains("e")  ){
                drinks.set (i, "Water");
             }
         }
+
         System.out.println(drinks);
     }
 }

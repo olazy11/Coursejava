@@ -9,11 +9,12 @@ public class Task5 {
     public static void main(String[] args) {
         ArrayList <Integer> evenNumbers = new ArrayList<>();
 
-        for (int i = 1; i <= 500; i++) {
-            if (i% 5 != 0) {
+        for (int i = 1; i <= 500; i=i+2) {
+           /* if (i% 5 != 0) {*/
                 evenNumbers.add(i);
             }
-        }
+        evenNumbers.removeIf(x->x%5==0);
+
         System.out.print(evenNumbers);
     }
 }

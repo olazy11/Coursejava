@@ -19,6 +19,11 @@ public class Task2 {
             System.out.print(c + " ");
         }
         System.out.println();
+        for (int i = 0; i < car.size(); i++) {
+            String car1 = car.get (i);
+            System.out.println(car);
+
+        }
         System.out.print(car.get(0)+" "+car.get(1)+" "+car.get(2)+" "+car.get(3)+" "+car.get(4));
     }
 }
