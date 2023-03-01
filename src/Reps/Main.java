@@ -1,39 +1,41 @@
 package Reps;
-/*
-* */
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
-class Main {
+
+public class Main {
+    public static void display() {
+        Map<String, Integer> map = new HashMap<>();
+        map.put("mango", 10);
+        map.put("apple", 30);
+        map.put("orange", 20);
+        var entrySet =map.entrySet();
+        for (var entry: entrySet) {
+            if (!entrySet.isEmpty()) {
+                System.out.println(entry.getKey() + " " + entry.getValue());
+            } else {
+                System.out.println("map is empty");
+            }
+        }
+    }
+
     public static void main(String[] args) {
+        Map<String, Integer> map = new HashMap<>();
+        map.put("mango", 10);
+        map.put("apple", 30);
+        map.put("orange", 20);
+display();
 
-        List<String> countries = new LinkedList<>();
-        countries.add("Armenia");
-        countries.add("USA");
-        countries.add("Kazakhstan");
-        countries.add("Australia");
-        countries.add("Pakistan");
-        countries.add("Russia");
-        countries.add("Azerbaijan");
+        System.out.println("*******");
+        map.clear();
 
-        countries.removeIf(x -> x.startsWith("A"));
+       display();
 
-        System.out.println(countries);
+
+
 
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

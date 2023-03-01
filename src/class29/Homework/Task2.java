@@ -1,5 +1,6 @@
 package class29.Homework;
 
+import java.util.LinkedHashSet;
 import java.util.TreeSet;
 
 /*Create a Set of cities in which you want to make sure that insertion order is maintained.
@@ -10,7 +11,7 @@ public class Task2 {
     public static void main(String[] args) {
 
 
-        TreeSet<String> cities = new TreeSet<>();
+        LinkedHashSet<String> cities = new LinkedHashSet<>();
         cities.add ("Milan");
         cities.add ("Astrakhan");
         cities.add ("Kaliningrad");

@@ -9,6 +9,11 @@ Using for loop/advanced for loop/ iterator access all methods of the class.
  * */
 public abstract class Insurance {
    private  String insuranceName;
+
+    public Insurance(String insuranceName) {
+        this.insuranceName = insuranceName;
+    }
+
     public abstract void getQuote();
 
     public abstract void cancelInsurance();
@@ -17,7 +22,10 @@ public abstract class Insurance {
 class Car extends Insurance {
     String carModel;
 
-    public Car(String carModel) {
+
+
+     Car(String insuranceName, String carModel) {
+        super(insuranceName);
         this.carModel = carModel;
     }
 
@@ -35,7 +43,8 @@ class Car extends Insurance {
 class Pet extends Insurance{
     String petType;
 
-    public Pet(String petType) {
+    public Pet(String insuranceName, String petType) {
+        super(insuranceName);
         this.petType = petType;
     }
 
@@ -50,6 +59,10 @@ class Pet extends Insurance{
     }
 }
 class Health extends Insurance {
+    public Health(String insuranceName) {
+        super(insuranceName);
+    }
+
     @Override
     public void getQuote() {
         System.out.println("your health quote is 550$");;
