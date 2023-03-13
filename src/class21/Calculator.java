@@ -20,6 +20,8 @@ public class Calculator {
         System.out.println(num1+num2);
     }
 
+    public void divide() {
+    }
 }
 
 
